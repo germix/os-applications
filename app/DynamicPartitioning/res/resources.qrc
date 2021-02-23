@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>file-exit.png</file>
+        <file>file-new.png</file>
+        <file>file-open.png</file>
+        <file>file-save.png</file>
+        <file>file-save_as.png</file>
+        <file>help-help.png</file>
+        <file>help-about.png</file>
+        <file>MainImage.png</file>
+        <file>reset.png</file>
+    </qresource>
+</RCC>

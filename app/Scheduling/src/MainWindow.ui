@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>633</width>
+    <height>416</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Planificador</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>2</number>
+    </property>
+    <property name="margin">
+     <number>2</number>
+    </property>
+    <item>
+     <widget class="QLabel" name="lblAlgoritms">
+      <property name="text">
+       <string>Algoritmos:</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QComboBox" name="cboAlgoritms"/>
+    </item>
+    <item>
+     <widget class="QTableView" name="tableView">
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>633</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>&amp;Archivo</string>
+    </property>
+    <addaction name="actionFileNew"/>
+    <addaction name="actionFileOpen"/>
+    <addaction name="actionFileSave"/>
+    <addaction name="actionFileSaveAs"/>
+    <addaction name="separator"/>
+    <addaction name="actionFileExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>A&amp;yuda</string>
+    </property>
+    <addaction name="actionHelpHelp"/>
+    <addaction name="separator"/>
+    <addaction name="actionHelpAbout"/>
+   </widget>
+   <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QToolBar" name="mainToolBar">
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionFileNew"/>
+   <addaction name="actionFileOpen"/>
+   <addaction name="actionFileSave"/>
+   <addaction name="separator"/>
+   <addaction name="actionSimulatorAddProcess"/>
+   <addaction name="actionSimulatorRemoveProcess"/>
+   <addaction name="separator"/>
+   <addaction name="actionSimulatorInitialIndex"/>
+   <addaction name="separator"/>
+   <addaction name="actionSimulatorEditDescription"/>
+   <addaction name="actionSimulatorEditMarks"/>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+  <action name="actionFileExit">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/file-exit.png</normaloff>:/file-exit.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Salir</string>
+   </property>
+  </action>
+  <action name="actionHelpAbout">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/help-about.png</normaloff>:/help-about.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Acerca de ...</string>
+   </property>
+  </action>
+  <action name="actionSimulatorRun">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/run.png</normaloff>:/run.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Simular</string>
+   </property>
+   <property name="toolTip">
+    <string>Simular</string>
+   </property>
+  </action>
+  <action name="actionSimulatorAddProcess">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/process-add.png</normaloff>:/process-add.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Agregar proceso</string>
+   </property>
+   <property name="toolTip">
+    <string>Agregar proceso</string>
+   </property>
+  </action>
+  <action name="actionSimulatorRemoveProcess">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/process-remove.png</normaloff>:/process-remove.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Eliminar proceso</string>
+   </property>
+   <property name="toolTip">
+    <string>Eliminar proceso</string>
+   </property>
+  </action>
+  <action name="actionFileNew">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/file-new.png</normaloff>:/file-new.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Nuevo</string>
+   </property>
+   <property name="toolTip">
+    <string>Nuevo</string>
+   </property>
+  </action>
+  <action name="actionFileOpen">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/file-open.png</normaloff>:/file-open.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Abrir</string>
+   </property>
+   <property name="toolTip">
+    <string>Abrir</string>
+   </property>
+  </action>
+  <action name="actionFileSave">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/file-save.png</normaloff>:/file-save.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Guardar</string>
+   </property>
+   <property name="toolTip">
+    <string>Guardar</string>
+   </property>
+  </action>
+  <action name="actionFileSaveAs">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/file-save_as.png</normaloff>:/file-save_as.png</iconset>
+   </property>
+   <property name="text">
+    <string>Guardar &amp;como...</string>
+   </property>
+  </action>
+  <action name="actionSimulatorInitialIndex">
+   <property name="text">
+    <string>Cambiar índice inicial de procesos</string>
+   </property>
+   <property name="toolTip">
+    <string>Cambiar índice inicial de procesos</string>
+   </property>
+  </action>
+  <action name="actionSimulatorEditDescription">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/edit-descripcion.png</normaloff>:/edit-descripcion.png</iconset>
+   </property>
+   <property name="text">
+    <string>Editar descripción</string>
+   </property>
+   <property name="toolTip">
+    <string>Editar descripción</string>
+   </property>
+  </action>
+  <action name="actionHelpHelp">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/help-help.png</normaloff>:/help-help.png</iconset>
+   </property>
+   <property name="text">
+    <string>A&amp;yuda</string>
+   </property>
+  </action>
+  <action name="actionSimulatorEditMarks">
+   <property name="icon">
+    <iconset resource="../res/resources.qrc">
+     <normaloff>:/edit-marks.png</normaloff>:/edit-marks.png</iconset>
+   </property>
+   <property name="text">
+    <string>Editar marcas</string>
+   </property>
+  </action>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="../res/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>actionFileExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileExit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelpAbout</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotHelpAbout()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorRun</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorExec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorAddProcess</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorAddProcess()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorRemoveProcess</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorRemoveProcess()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>199</x>
+     <y>149</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileNew</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileNew()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileOpen</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileOpen()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileSave</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileSave()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionFileSaveAs</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotFileSaveAs()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorInitialIndex</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorChangeInitialIndex()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorEditDescription</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorEditDescription()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionHelpHelp</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotHelpHelp()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>actionSimulatorEditMarks</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>slotSimulatorEditMarks()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>316</x>
+     <y>207</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>slotFileExit()</slot>
+  <slot>slotHelpAbout()</slot>
+  <slot>slotSimulatorExec()</slot>
+  <slot>slotSimulatorAddProcess()</slot>
+  <slot>slotSimulatorRemoveProcess()</slot>
+  <slot>slotFileNew()</slot>
+  <slot>slotFileOpen()</slot>
+  <slot>slotFileSave()</slot>
+  <slot>slotFileSaveAs()</slot>
+  <slot>slotSimulatorChangeInitialIndex()</slot>
+  <slot>slotSimulatorEditDescription()</slot>
+  <slot>slotHelpHelp()</slot>
+  <slot>slotSimulatorEditMarks()</slot>
+ </slots>
+</ui>

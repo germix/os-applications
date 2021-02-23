@@ -1,0 +1,19 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MainImage.png</file>
+        <file>run.png</file>
+        <file>process-add.png</file>
+        <file>process-remove.png</file>
+        <file>file-new.png</file>
+        <file>file-open.png</file>
+        <file>file-save.png</file>
+        <file>file-save_as.png</file>
+        <file>file-exit.png</file>
+        <file>help-about.png</file>
+        <file>view-initial-index-0.png</file>
+        <file>view-initial-index-1.png</file>
+        <file>edit-descripcion.png</file>
+        <file>help-help.png</file>
+        <file>edit-marks.png</file>
+    </qresource>
+</RCC>

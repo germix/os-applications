@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheduling description="Práctico Planificación - Ejercicio 11" rulerSteps="1" initialIndex="1">
+    <Process at="0" bursts="8"/>
+    <Process at="1" bursts="2"/>
+    <Process at="4" bursts="3"/>
+    <Process at="3" bursts="10"/>
+</Scheduling>

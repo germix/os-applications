@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>MainImage.png</file>
+        <file>file-exit.png</file>
+        <file>help-about.png</file>
+        <file>run.png</file>
+        <file>action-cancel.png</file>
+        <file>action-play.png</file>
+        <file>action-step.png</file>
+    </qresource>
+</RCC>

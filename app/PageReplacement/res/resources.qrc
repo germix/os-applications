@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/">
+        <file>dice.png</file>
+        <file>MainImage.png</file>
+        <file>file-exit.png</file>
+        <file>help-about.png</file>
+    </qresource>
+</RCC>
